@@ -5,7 +5,7 @@
       <div class="col-6 bg-white p-4 rounded-end">
         <div class="text-end"></div>
         <img  class="py-3" src="../../public\assets\img\logo.png" width="140" alt="logo" />
-        <form action="#">
+       
           <div class="mb-3">
             <label for="email" class="form-label">Correo electronico</label>
             <input type="email" class="form-control" name="email" v-model="email" />
@@ -21,15 +21,15 @@
             >
           </div>
           <div class="d-grid">
-            <button type="submit" class="btn btn-primary" @click="login">
+            <button  class="btn btn-primary" @click="login">
               Iniciar sesion
             </button>
           </div>
           <div class="my-3">
-            <span>No tienes cuenta? <a href="#">Registrate</a></span> <br />
+            <span>No tienes cuenta? <router-link to="/register">Registrate</router-link> </span> <br />
             <span> <a href="#">Recuperar contraseña</a></span>
           </div>
-        </form>
+        
         <div class="container w-100 ">
           <div class="row text-center">
             <div class="col-12">Iniciar sesion</div>
@@ -121,7 +121,7 @@ export default {
       } catch (error) {
         this.error = true;
         this.errorMessage = error.response.data.message; // como aceder al mensage
-        console.error(error);
+        console.log(error.response);
         console.log(error.response.data.message);
       }
     },
