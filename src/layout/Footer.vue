@@ -1,13 +1,7 @@
 <template>
-<div>
+  <div>
     <footer>Este es el footer</footer>
-    
-</div>
-    
+  </div>
 </template>
 
-<script>
-
-
-
-</script>
+<script></script>
