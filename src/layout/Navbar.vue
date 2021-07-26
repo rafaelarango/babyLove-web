@@ -26,11 +26,28 @@
                 >Contactos</router-link
               >
             </li>
-            <li class="nav-item">
-              <!-- <a class="nav-link" href="#">Productos</a> -->
-              <router-link to="/productos" class="nav-link"
-                >Productos</router-link
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
+                Productos
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <router-link to="/productos" class="nav-link text-primary"
+                  >Productos</router-link
+                >
+                <router-link to="/cambios" class="nav-link text-primary"
+                  >Cambios</router-link
+                >
+              </ul>
             </li>
             <li class="nav-item">
               <!-- <a class="nav-link" href="#">Mas</a> -->
@@ -64,25 +81,39 @@
                 <router-link to="/galeria" class="nav-link text-primary"
                   >Galeria</router-link
                 >
-                <router-link to="/cambios" class="nav-link text-primary"
-                  >Cambios</router-link
-                >
                 <router-link to="/sugerencias" class="nav-link text-primary"
                   >Sugerencias</router-link
                 >
               </ul>
             </li>
           </ul>
-          <!-- <form class="d-flex">
+          <form class="d-flex"> 
+            <button class="btn btn-primary" @click="cerrarSecion">Cerrar secion</button>
     
-        <router-link to="/login" class="nav-link text-white bg-warning rounded-pill">Ingresar</router-link>
-        <router-link to="/register" class="nav-link text-white">Registrarse</router-link>
+        <!-- <router-link to="/login" class="nav-link text-white bg-warning rounded-pill px-5 me-5">Cerrar</router-link> -->
+        <!-- <router-link to="/register" class="nav-link text-white">Registrarse</router-link> -->
         
-      </form> -->
+      </form>
         </div>
       </div>
     </nav>
   </div>
 </template>
 
-<script></script>
+<script>
+
+export default {
+  name: "Navbar",
+  methods: {
+
+    cerrarSecion() {
+
+
+    }
+
+  }
+}
+
+
+
+</script>

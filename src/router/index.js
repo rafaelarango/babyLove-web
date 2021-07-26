@@ -25,6 +25,7 @@ const routes = [
       isPublic: true,
     },
   },
+
   {
     path: "/register",
     name: "Register",
@@ -34,6 +35,107 @@ const routes = [
       isPublic: true,
     },
   },
+
+  {
+    path: "/inicio",
+    name: "Inicio",
+
+    component: () => import("../views/Inicio.vue"),
+    meta: {
+      isPublic: false,
+    },
+  },
+
+  {
+    path: "/contactos",
+    name: "Contactos",
+
+    component: () => import("../views/Contactos.vue"),
+    meta: {
+      isPublic: false,
+    },
+  },
+
+  {
+    path: "/productos",
+    name: "Productos",
+
+    component: () => import("../views/Productos.vue"),
+    meta: {
+      isPublic: false,
+    },
+  },
+
+  {
+    path: "/cambios",
+    name: "Cambios",
+
+    component: () => import("../views/Cambios.vue"),
+    meta: {
+      isPublic: false,
+    },
+  },
+
+  {
+    path: "/categorias",
+    name: "Categorias",
+
+    component: () => import("../views/Categorias.vue"),
+    meta: {
+      isPublic: false,
+    },
+  },
+
+  {
+    path: "/descuentos",
+    name: "Descuentos",
+
+    component: () => import("../views/Descuentos.vue"),
+    meta: {
+      isPublic: false,
+    },
+  },
+
+  {
+    path: "/roles",
+    name: "Roles",
+
+    component: () => import("../views/Roles/Roles.vue"),
+    meta: {
+      isPublic: false,
+    },
+  },
+
+  {
+    path: "/roles/add",
+    name: "AddRoles",
+
+    component: () => import("../views/Roles/AddRoles.vue"),
+    meta: {
+      isPublic: false,
+    },
+  },
+
+  {
+    path: "/galeria",
+    name: "Galeria",
+
+    component: () => import("../views/Galeria.vue"),
+    meta: {
+      isPublic: false,
+    },
+  },
+
+  {
+    path: "/sugerencias",
+    name: "Segurencias",
+
+    component: () => import("../views/Sugerencias.vue"),
+    meta: {
+      isPublic: false,
+    },
+  },
+
 ];
 
 const router = new VueRouter({
