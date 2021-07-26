@@ -1,5 +1,6 @@
 <template>
-  <div class="container w-75 bg-primary mt-5 rounded shadow">
+<div class="backgroun-login py-3">
+  <div class="container w-75 bg-primary  rounded shadow ">
     <div class="row align-items-stretch">
       <div
         class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded"
@@ -93,6 +94,8 @@
       </div>
     </div>
   </div>
+
+</div>
   <!-- <div class="container">
     <h1 class="text-primary " >Login</h1>
     <input type="text" v-model="email" />
@@ -104,7 +107,7 @@
 </template>
 
 <script>
-const axios = require("axios");
+import usersService from '../services/Users/index'
 
 export default {
   name: "Login",
@@ -132,10 +135,7 @@ export default {
         };
         console.log("Vamos a imprimir el usuario", user);
 
-        const userLogin = await axios.post(
-          "http://localhost:3000/api/users/login",
-          user
-        );
+        const userLogin = await usersService.login(user);
         console.log(
           "Optenemos usuari con axios" + JSON.stringify(userLogin.data)
         ); // POR QUE NOS IMPRIME OBJETO OBJETO
@@ -158,9 +158,10 @@ export default {
 };
 </script>
 <style>
-body {
+.backgroun-login {
   background: #ffe259;
   background: linear-gradient(to right, #ffa751, #ffe259);
+  height: 100vh;
 }
 .bg {
   background-image: url();

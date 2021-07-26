@@ -125,7 +125,9 @@
             </div>
           </div>
         </div>
+        <button class="btn btn-primary">Registrar</button>
         <div class="my-3">
+          
           <span
             >No tienes cuenta? <router-link to="/login">Ingresar</router-link>
           </span>
