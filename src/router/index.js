@@ -117,6 +117,15 @@ const routes = [
   },
 
   {
+    path: "/roles/edit/:idRol",// creamos ruta con parametro
+    name: "editRoles",
+    component: () => import("../views/Roles/EditRol.vue"),
+    meta: {
+      isPublic: false,
+    },
+  },
+
+  {
     path: "/galeria",
     name: "Galeria",
 
