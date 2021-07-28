@@ -125,7 +125,7 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-primary">Registrar</button>
+        <button class="btn btn-primary" @click="register">Registrar</button>
         <div class="my-3">
           
           <span
@@ -160,7 +160,8 @@
 </template>
 
 <script>
-import axios from "axios";
+import usersService from "../services/Users/index"
+
 
 export default {
   name: "Register",
@@ -189,10 +190,12 @@ export default {
           password: this.password,
         };
         console.log(`Vamos a imprimir el usuario`, user);
-        const userRegister = await axios.post(
-          "http://localhost:3000/api/users/register",
-          user
-        );
+        // const userRegister = await axios.post(
+        //   "http://localhost:3000/api/users/register",
+        //   user
+        // );
+        const userRegister = await usersService.register(user);
+
         console.log(
           `Imprimir usuarios registrados en la base de datos`,
           userRegister

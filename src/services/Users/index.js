@@ -6,6 +6,11 @@ const usersService = {};
 
 usersService.login =  async (user) => {
     return await axios.post(` ${baseUrl}/api/users/login`, user)
+};
+
+usersService.register = async (user) => {
+    return await axios.post(`${baseUrl}/api/users/register`, user)
 }
+
 
 export default usersService;
