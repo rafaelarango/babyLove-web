@@ -1,12 +1,17 @@
 <template>
   <div class="container mt-4">
     <input
-        type="text"
-        class="form-control my-3"
-        v-model="name"
-        @keyUp.enter="name"
-      />
-      <button class="btn btn-primary mb-4 d-flex justify-content-start" @click="addRol">Agregar</button>
+      type="text"
+      class="form-control my-3"
+      v-model="name"
+      @keyUp.enter="name"
+    />
+    <button
+      class="btn btn-primary mb-4 d-flex justify-content-start"
+      @click="addRol"
+    >
+      Agregar
+    </button>
   </div>
 </template>
 
@@ -27,8 +32,8 @@ export default {
           name: this.name,
         };
 
-        const addRol = await rolesService.add(rol);
-        console.log(`Imprimimos el rol regisrado`, addRol);
+        await rolesService.add(rol);
+        
 
         this.$router.push({
           name: "Roles",

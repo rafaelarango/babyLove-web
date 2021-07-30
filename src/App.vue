@@ -22,13 +22,7 @@ export default {
   },
   computed: {
     isPublic() {
-      console.log("this.$route.meta?.isPublic", this.$route.meta?.isPublic);
-      return this.$route.meta?.isPublic ?? false; //si meta no existe no tiene que haceder apubli (?? es como un o)
-      //  if(this.$route.meta){
-      //     return this.$route.meta.isPublic
-      // } else {
-      //   return false
-      // }
+      return this.$route.meta?.isPublic ?? false;
     },
   },
 };
