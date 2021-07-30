@@ -167,10 +167,8 @@ export default {
           email: this.email,
           password: this.password,
         };
-        
-       await usersService.register(user);
 
-       
+        await usersService.register(user);
       } catch (error) {
         console.error(error);
       }

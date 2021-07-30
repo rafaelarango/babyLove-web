@@ -33,7 +33,6 @@ export default {
         };
 
         await rolesService.add(rol);
-        
 
         this.$router.push({
           name: "Roles",
