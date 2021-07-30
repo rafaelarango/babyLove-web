@@ -6,8 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
+const routes = [{
     path: "/",
     name: "Home",
     component: Home,
@@ -117,7 +116,7 @@ const routes = [
   },
 
   {
-    path: "/roles/edit/:idRol",// creamos ruta con parametro
+    path: "/roles/edit/:idRol", // creamos ruta con parametro
     name: "editRoles",
     component: () => import("../views/Roles/EditRol.vue"),
     meta: {
