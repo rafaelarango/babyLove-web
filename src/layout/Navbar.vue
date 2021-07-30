@@ -17,11 +17,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <!-- <a class="nav-link active" aria-current="page" href="#">inicio</a> -->
               <router-link to="/inicio" class="nav-link">Inicio</router-link>
             </li>
             <li class="nav-item">
-              <!-- <a class="nav-link" href="#">Contactos</a> -->
               <router-link to="/contactos" class="nav-link"
                 >Contactos</router-link
               >
@@ -50,7 +48,6 @@
               </ul>
             </li>
             <li class="nav-item">
-              <!-- <a class="nav-link" href="#">Mas</a> -->
               <router-link to="/categorias" class="nav-link"
                 >Categorias</router-link
               >
@@ -87,13 +84,11 @@
               </ul>
             </li>
           </ul>
-          <form class="d-flex"> 
-            <button class="btn btn-primary" @click="cerrarSecion">Cerrar secion</button>
-    
-        <!-- <router-link to="/login" class="nav-link text-white bg-warning rounded-pill px-5 me-5">Cerrar</router-link> -->
-        <!-- <router-link to="/register" class="nav-link text-white">Registrarse</router-link> -->
-        
-      </form>
+          <form class="d-flex">
+            <button class="btn btn-primary" @click="cerrarSecion">
+              Cerrar secion
+            </button>
+          </form>
         </div>
       </div>
     </nav>
@@ -101,19 +96,10 @@
 </template>
 
 <script>
-
 export default {
   name: "Navbar",
   methods: {
-
-    cerrarSecion() {
-
-
-    }
-
-  }
-}
-
-
-
+    cerrarSecion() {},
+  },
+};
 </script>
