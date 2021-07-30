@@ -127,7 +127,6 @@
         </div>
         <button class="btn btn-primary" @click="register">Registrar</button>
         <div class="my-3">
-          
           <span
             >No tienes cuenta? <router-link to="/login">Ingresar</router-link>
           </span>
@@ -137,31 +136,10 @@
       </div>
     </div>
   </div>
-
-  <!-- <div>
-    <h1>Register</h1>
-    <p>name</p>
-    <input type="text" v-model="name" />
-    <p>type_document</p>
-    <input type="text" v-model="type_document" />
-    <p>document</p>
-    <input type="number" v-model="document" />
-    <p>direction</p>
-    <input type="text" v-model="direction" />
-    <p>phone</p>
-    <input type="number" v-model="phone" />
-    <p>email</p>
-    <input type="text" v-model="email" />
-    <p>password</p>
-    <input type="text" v-model="password" />
-    <button @click="register">Sing in</button>
-    <router-link to="/login">Sign up</router-link>
-  </div> -->
 </template>
 
 <script>
-import usersService from "../services/Users/index"
-
+import usersService from "../services/Users/index";
 
 export default {
   name: "Register",
@@ -189,17 +167,8 @@ export default {
           email: this.email,
           password: this.password,
         };
-        console.log(`Vamos a imprimir el usuario`, user);
-        // const userRegister = await axios.post(
-        //   "http://localhost:3000/api/users/register",
-        //   user
-        // );
-        const userRegister = await usersService.register(user);
 
-        console.log(
-          `Imprimir usuarios registrados en la base de datos`,
-          userRegister
-        );
+        await usersService.register(user);
       } catch (error) {
         console.error(error);
       }
@@ -207,9 +176,4 @@ export default {
   },
 };
 </script>
-<style>
-body {
-  background: #ffe259;
-  background: linear-gradient(to right, #ffa751, #ffe259);
-}
-</style>
+<style></style>

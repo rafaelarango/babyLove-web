@@ -1,12 +1,7 @@
 <template>
   <div class="container  text-primary text-center ">
-    <!-- <p>{{roles}}</p> -->
-    <!-- <button class="btn btn-primary">Agregar</button> -->
-
-    <!-- https://programmerclick.com/article/22181395269/                 crear una tabla -->
-
+    <!-- https://programmerclick.com/article/22181395269/  crear una tabla -->
     <h1 class="mt-2">Roles</h1>
-
     <table class="table  table-success table-striped mt-5 ">
       <thead>
         <tr>
@@ -17,12 +12,14 @@
       </thead>
       <tbody>
         <tr v-for="(rol, i) in roles" :key="i">
-          <!-- las columnas van dentro de un row -->
-          <td class="col">{{ rol.id }}</td> 
+          <td class="col">{{ rol.id }}</td>
           <td class="col-7">{{ rol.name }}</td>
           <td class="col-5">
-            <div > 
-              <button class="btn btn-primary btn-sm me-3 "  @click="editRol(rol.id)" >
+            <div>
+              <button
+                class="btn btn-primary btn-sm me-3 "
+                @click="editRol(rol.id)"
+              >
                 Editar
               </button>
               <button class="btn btn-danger btn-sm" @click="eliminarRol">
@@ -32,8 +29,9 @@
           </td>
         </tr>
       </tbody>
-      <router-link to="/roles/add" class="btn btn-primary mt-2">Agregar</router-link>
-      <!-- <button class="btn btn-primary mb-4 d-flex justify-content-start" @click="addRol">Agregar</button> -->
+      <router-link to="/roles/add" class="btn btn-primary mt-2"
+        >Agregar</router-link
+      >
     </table>
   </div>
 </template>
@@ -42,6 +40,7 @@
 import rolesService from "../../services/roles/index";
 export default {
   name: "Roles",
+
   data() {
     return {
       roles: [],
@@ -55,8 +54,6 @@ export default {
   methods: {
     async getRoles() {
       try {
-        //  const rolData = await rolesService.list();
-        //  this.roles = rolData.data;
         const { data } = await rolesService.list();
         this.roles = data;
       } catch (error) {
@@ -66,16 +63,12 @@ export default {
 
     async editRol(id) {
       try {
-       // console.log(`boton de editar rol ok`, id)
-
-      this.$router.push({
+        this.$router.push({
           name: "editRoles",
           params: {
-            idRol: id
-          }
+            idRol: id,
+          },
         });
-
-
       } catch (error) {
         console.error(error);
       }
@@ -83,14 +76,11 @@ export default {
 
     async eliminarRol() {
       try {
-        console.log(`boton de eliminar rol ok`)
-        
+        console.log(`boton de eliminar rol ok`);
       } catch (error) {
-        console.error(error)
+        console.error(error);
       }
-    }
-
-
+    },
   },
 };
 </script>
