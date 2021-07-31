@@ -115,10 +115,8 @@ export default {
           email: this.email,
           password: this.password,
         };
-        
 
         const userLogin = await usersService.login(user);
-       
 
         this.error = false;
         this.errorMessage = "";
