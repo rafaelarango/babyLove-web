@@ -9,7 +9,7 @@
           <div class="text-end"></div>
           <img
             class="py-3"
-            src="../../public\assets\img\logo.png"
+            src="../../public/assets/img/logo.png"
             width="140"
             alt="logo"
           />
@@ -60,7 +60,7 @@
                   <div class="row align-items-center">
                     <div class="col-2 d-none d-md-block">
                       <img
-                        src="../../public\assets\img\face.png"
+                        src="../../public/assets/img/face.png"
                         width="32"
                         alt="face"
                       />
@@ -76,7 +76,7 @@
                   <div class="row align-items-center">
                     <div class="col-2 d-none d-md-block">
                       <img
-                        src="../../public\assets\img\google.png"
+                        src="../../public/assets/img/google.png"
                         width="32"
                         alt="Google"
                       />
